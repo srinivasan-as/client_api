@@ -14,7 +14,7 @@ export function UpdateTodo({ _id, handleClose, handleEdited }) {
         console.log({ _id }, { data });
 
         axios
-            .put(`https://server-client.onrender.com/${id}`, data)
+            .put(`https://server-client.onrender.com/api/todo/${_id}`, data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);

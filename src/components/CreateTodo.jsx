@@ -21,7 +21,7 @@ export function CreateTodo() {
 
         console.log({ todo });
         axios
-            .post("https://server-client.onrender.com", data)
+            .post("https://server-client.onrender.com/api/todo", data)
             .then((res) => {
                 setData({ title: "", description: "" });
                 console.log(res.data.message);
